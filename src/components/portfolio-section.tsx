@@ -86,7 +86,9 @@ const PortfolioSection = () => {
     if (activeFilter === "All") {
       setFilteredProjects(projects)
     } else {
-      setFilteredProjects(projects.filter((project) => project.tags.includes(activeFilter)))
+      setFilteredProjects(projects.filter((project) => 
+        project.tags.some((tag) => tag.toLowerCase() === activeFilter.toLowerCase())
+      ))
     }
   }, [activeFilter])
 

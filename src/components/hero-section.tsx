@@ -1,13 +1,25 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react"
 import { useParallax } from "./parallax-provider"
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null)
   const { scrollY } = useParallax()
+  const [particles, setParticles] = useState<Array<{ left: number; top: number }>>([])
 
+  // Gerar partículas apenas no cliente
+  useEffect(() => {
+    setParticles(
+      Array.from({ length: 20 }).map(() => ({
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+      }))
+    )
+  }, [])
+
+  // Animação do título
   useEffect(() => {
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let interval: NodeJS.Timeout | null = null
@@ -59,7 +71,7 @@ const HeroSection = () => {
       <div
         className="fixed inset-0 bg-gradient-to-b from-white to-slate-100 dark:from-slate-900 dark:to-slate-950"
         style={{
-          transform: `translateY(${scrollY * 0.25}px)`,
+          transform: `translateY(${typeof window !== "undefined" ? scrollY * 0.25 : 0}px)`,
         }}
       />
 
@@ -67,7 +79,7 @@ const HeroSection = () => {
       <div
         className="fixed inset-0 bg-grid-pattern opacity-10 dark:opacity-5"
         style={{
-          transform: `translateY(${scrollY * 0.1}px)`,
+          transform: `translateY(${typeof window !== "undefined" ? scrollY * 0.1 : 0}px)`,
         }}
       />
 
@@ -75,26 +87,26 @@ const HeroSection = () => {
       <div
         className="fixed -top-40 -right-40 w-96 h-96 bg-purple-300 dark:bg-purple-900 rounded-full filter blur-3xl opacity-20 animate-blob"
         style={{
-          transform: `translate(${scrollY * 0.15}px, ${scrollY * -0.1}px)`,
+          transform: `translate(${typeof window !== "undefined" ? scrollY * 0.15 : 0}px, ${typeof window !== "undefined" ? scrollY * -0.1 : 0}px)`,
         }}
       />
       <div
         className="fixed -bottom-40 -left-40 w-96 h-96 bg-teal-300 dark:bg-teal-900 rounded-full filter blur-3xl opacity-20 animate-blob animation-delay-2000"
         style={{
-          transform: `translate(${scrollY * -0.15}px, ${scrollY * 0.1}px)`,
+          transform: `translate(${typeof window !== "undefined" ? scrollY * -0.15 : 0}px, ${typeof window !== "undefined" ? scrollY * 0.1 : 0}px)`,
         }}
       />
 
       {/* Floating Particles */}
       <div className="fixed inset-0 pointer-events-none">
-        {Array.from({ length: 20 }).map((_, i) => (
+        {particles.map((particle, i) => (
           <div
             key={i}
             className="absolute w-2 h-2 bg-teal-500/20 dark:bg-teal-400/20 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              transform: `translateY(${scrollY * (Math.random() * 0.25)}px)`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              transform: `translateY(${typeof window !== "undefined" ? scrollY * (Math.random() * 0.25) : 0}px)`,
               transition: "transform 0.1s linear",
             }}
           />
@@ -106,7 +118,7 @@ const HeroSection = () => {
         <h1
           className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-slate-900 dark:text-white"
           style={{
-            transform: `translateY(${scrollY * -0.1}px)`,
+            transform: `translateY(${typeof window !== "undefined" ? scrollY * -0.1 : 0}px)`,
           }}
         >
           Olá, sou{" "}
@@ -115,7 +127,7 @@ const HeroSection = () => {
             <div
               className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-purple-600/20 blur-xl -z-10"
               style={{
-                transform: `translateY(${scrollY * 0.05}px) scale(1.2)`,
+                transform: `translateY(${typeof window !== "undefined" ? scrollY * 0.05 : 0}px) scale(1.2)`,
               }}
             />
           </span>
@@ -125,7 +137,7 @@ const HeroSection = () => {
           ref={titleRef}
           className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-purple-600 dark:text-purple-400"
           style={{
-            transform: `translateY(${scrollY * -0.075}px)`,
+            transform: `translateY(${typeof window !== "undefined" ? scrollY * -0.075 : 0}px)`,
           }}
         >
           DESENVOLVEDOR FULLSTACK
@@ -134,7 +146,7 @@ const HeroSection = () => {
         <p
           className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-slate-700 dark:text-slate-300"
           style={{
-            transform: `translateY(${scrollY * -0.05}px)`,
+            transform: `translateY(${typeof window !== "undefined" ? scrollY * -0.05 : 0}px)`,
           }}
         >
           Transformando ideias em experiências digitais incríveis com código limpo e design intuitivo.
@@ -143,7 +155,7 @@ const HeroSection = () => {
         <div
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           style={{
-            transform: `translateY(${scrollY * -0.025}px)`,
+            transform: `translateY(${typeof window !== "undefined" ? scrollY * -0.025 : 0}px)`,
           }}
         >
           <a
@@ -187,7 +199,7 @@ const HeroSection = () => {
         <div
           className="flex justify-center gap-6 mb-16"
           style={{
-            transform: `translateY(${scrollY * -0.01}px)`,
+            transform: `translateY(${typeof window !== "undefined" ? scrollY * -0.01 : 0}px)`,
           }}
         >
           <a
@@ -222,7 +234,7 @@ const HeroSection = () => {
         <div
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
           style={{
-            transform: `translate(-50%, ${scrollY * 0.05}px)`,
+            transform: `translate(-50%, ${typeof window !== "undefined" ? scrollY * 0.05 : 0}px)`,
           }}
         >
           <ArrowDown className="text-teal-500 dark:text-teal-400" size={32} />
@@ -233,4 +245,3 @@ const HeroSection = () => {
 }
 
 export default HeroSection
-
