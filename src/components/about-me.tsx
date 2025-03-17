@@ -137,32 +137,32 @@ const AboutMe = () => {
             <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 pb-8">
               {technologies.map((item, index) => (
                 <li
-                  key={index}
-                  ref={(el) => {if (el) {(techItemsRef.current[index] = el)}}}
-                  className="tech-item px-4 py-3 rounded-xl text-center font-medium opacity-0 translate-y-4 transition-all duration-500 bg-white dark:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-1 border border-slate-200 dark:border-slate-700 transform hover:scale-105"
-                  style={{
-                    transitionDelay: `${index * 100}ms`,
-                  }}
-                >
-                  <div className="flex flex-col items-center gap-2">
-                    <div
-                      className="w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300"
-                      style={{ backgroundColor: `${item.color}20` }}
-                    >
-                      <span className="text-2xl" style={{ color: item.color }}>
-                        {item.icon === "js" && "⬢"}
-                        {item.icon === "react" && "⚛️"}
-                        {item.icon === "ts" && "TS"}
-                        {item.icon === "python" && "🐍"}
-                        {item.icon === "node" && "⬢"}
-                        {item.icon === "php" && "PHP"}
-                        {item.icon === "git" && "⎇"}
-                        {item.icon === "github" && "⦿"}
-                      </span>
-                    </div>
-                    <span className="text-slate-900 dark:text-white">{item.name}</span>
+                key={index}
+                ref={(el) => { if (el) { techItemsRef.current[index] = el } }}
+                className="tech-item px-4 py-3 rounded-xl text-center font-medium opacity-0 translate-y-4 "
+                style={{
+                  transitionDelay: `${index * 100}ms`,
+                }}
+              >
+                <div className="flex flex-col items-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                  <div
+                    className="w-12 h-12 rounded-lg flex items-center justify-center transition-all duration-300"
+                    style={{ backgroundColor: `${item.color}20` }}
+                  >
+                    <span className="text-2xl" style={{ color: item.color }}>
+                      {item.icon === "js" && "⬢"}
+                      {item.icon === "react" && "⚛️"}
+                      {item.icon === "ts" && "TS"}
+                      {item.icon === "python" && "🐍"}
+                      {item.icon === "node" && "⬢"}
+                      {item.icon === "php" && "PHP"}
+                      {item.icon === "git" && "⎇"}
+                      {item.icon === "github" && "⦿"}
+                    </span>
                   </div>
-                </li>
+                  <span className="text-slate-900 dark:text-white">{item.name}</span>
+                </div>
+              </li>
               ))}
             </ul>
           </div>

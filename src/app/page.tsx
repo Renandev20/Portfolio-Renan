@@ -17,7 +17,7 @@ export default function Home() {
       <AboutMe />
       <PortfolioSection />
       <SkillsSection />
-      <LearningSection /> {/* Nova seção adicionada */}
+      <LearningSection /> 
       <ContactSection />
       <Footer />
     </main>
