@@ -21,7 +21,7 @@ const Footer = () => {
 
           <div className="flex gap-6">
             <a
-              href="https://github.com"
+              href="https://github.com/joaocruz1"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300"
@@ -30,7 +30,7 @@ const Footer = () => {
               <Github size={20} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/joao-cruz-604b3b2b5/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300"
@@ -39,7 +39,7 @@ const Footer = () => {
               <Linkedin size={20} />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/JCruz00001"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300"
@@ -48,7 +48,7 @@ const Footer = () => {
               <Twitter size={20} />
             </a>
             <a
-              href="mailto:joao.cruz@email.com"
+              href="mailto:joaovcruz50@gmail.com"
               className="text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300"
               aria-label="Email"
             >
@@ -122,4 +122,3 @@ const Footer = () => {
 }
 
 export default Footer
-

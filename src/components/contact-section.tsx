@@ -1,9 +1,8 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useRef, useEffect } from "react"
-import { Mail, Phone, MapPin, Send } from "lucide-react"
+import { Mail, MessageCircle, MapPin, Send } from "lucide-react"
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -26,17 +25,37 @@ const ContactSection = () => {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setSubmitMessage({
-        type: "success",
-        text: "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+    try {
+      const response = await fetch('http://localhost:3001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       })
+
+      if (response.ok) {
+        setSubmitMessage({
+          type: "success",
+          text: "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+        })
+      } else {
+        setSubmitMessage({
+          type: "error",
+          text: "Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.",
+        })
+      }
+    } catch (error) {
+      setSubmitMessage({
+        type: "error",
+        text: "Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.",
+      })
+    } finally {
+      setIsSubmitting(false)
 
       // Reset form
       setFormData({
@@ -50,7 +69,7 @@ const ContactSection = () => {
       setTimeout(() => {
         setSubmitMessage(null)
       }, 5000)
-    }, 1500)
+    }
   }
 
   useEffect(() => {
@@ -101,18 +120,22 @@ const ContactSection = () => {
                   <Mail className="text-teal-500 dark:text-teal-400" size={24} />
                 </div>
                 <div>
+                  <a href="mailto:joaovcruz50@gmail.com" className="text-slate-900 dark:text-white">
                   <h4 className="text-purple-600 dark:text-purple-400 font-medium">Email</h4>
-                  <p className="text-slate-900 dark:text-white">joao.cruz@email.com</p>
+                  <p className="text-slate-900 dark:text-white">joaovcruz50@gmail.com</p>
+                  </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-teal-100 dark:bg-teal-900/30 rounded-full">
-                  <Phone className="text-teal-500 dark:text-teal-400" size={24} />
+                  <MessageCircle className="text-teal-500 dark:text-teal-400" size={24} />
                 </div>
                 <div>
-                  <h4 className="text-purple-600 dark:text-purple-400 font-medium">Telefone</h4>
-                  <p className="text-slate-900 dark:text-white">(11) 98765-4321</p>
+                  <a href="https://wa.me/553599747872" className="text-slate-900 dark:text-white">
+                  <h4 className="text-purple-600 dark:text-purple-400 font-medium">WhatsApp</h4>
+                  <p className="text-slate-900 dark:text-white">(35) 99747-8472</p>
+                  </a>
                 </div>
               </div>
 
@@ -122,7 +145,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-purple-600 dark:text-purple-400 font-medium">Localização</h4>
-                  <p className="text-slate-900 dark:text-white">São Paulo, Brasil</p>
+                  <p className="text-slate-900 dark:text-white">Minas Gerais, Brasil</p>
                 </div>
               </div>
             </div>
@@ -130,6 +153,17 @@ const ContactSection = () => {
 
           <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+            {submitMessage && (
+                <div
+                  className={`p-4 rounded-lg ${
+                    submitMessage.type === "success"
+                      ? "bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200"
+                      : "bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-200"
+                  }`}
+                >
+                  {submitMessage.text}
+                </div>
+              )}
               <div>
                 <label htmlFor="name" className="block text-slate-900 dark:text-white mb-2 font-medium">
                   Nome
@@ -212,17 +246,6 @@ const ContactSection = () => {
                 )}
               </button>
 
-              {submitMessage && (
-                <div
-                  className={`p-4 rounded-lg ${
-                    submitMessage.type === "success"
-                      ? "bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200"
-                      : "bg-red-100 dark:bg-red-900/20 text-red-800 dark:text-red-200"
-                  }`}
-                >
-                  {submitMessage.text}
-                </div>
-              )}
             </form>
           </div>
         </div>
@@ -232,4 +255,3 @@ const ContactSection = () => {
 }
 
 export default ContactSection
-

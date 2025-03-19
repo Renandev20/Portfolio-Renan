@@ -18,7 +18,7 @@ const technologies: TypeTechnologies[] = [
   { name: "Node.js", icon: "node", color: "#68A063" },
   { name: "PHP", icon: "php", color: "#777BB3" },
   { name: "Git", icon: "git", color: "#F1502F" },
-  { name: "GitHub", icon: "github", color: "#171515" },
+  { name: "GitHub", icon: "github", color: "#ffffff" },
 ]
 
 const AboutMe = () => {
@@ -124,7 +124,7 @@ const AboutMe = () => {
               </span>
             </h3>
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-              Sou um desenvolvedor apaixonado por tecnologia e inovação. Minha jornada na programação começou há 5 anos,
+              Sou um desenvolvedor apaixonado por tecnologia e inovação. Minha jornada na programação começou há 3 anos,
               e desde então tenho me dedicado a criar soluções eficientes e impactantes.
             </p>
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
