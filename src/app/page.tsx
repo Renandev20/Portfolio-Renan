@@ -11,7 +11,7 @@ import Footer from "../components/footer"
 
 
 export default function Home() {
-  return (<>
+  return (
     <main className="min-h-screen bg-white dark:bg-slate-950">
       <Header />
       <HeroSection />
@@ -20,10 +20,8 @@ export default function Home() {
       <SkillsSection />
       <LearningSection /> 
       <ContactSection />
-      
+      <Footer />
     </main>
-    <Footer />
-    </>
   )
 }
 

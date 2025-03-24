@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter, Mail, Code } from "lucide-react"
+import Link from "next/link"
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -20,7 +21,7 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-6">
-            <a
+            <Link
               href="https://github.com/joaocruz1"
               target="_blank"
               rel="noopener noreferrer"
@@ -28,8 +29,8 @@ const Footer = () => {
               aria-label="GitHub"
             >
               <Github size={20} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.linkedin.com/in/joao-cruz-604b3b2b5/"
               target="_blank"
               rel="noopener noreferrer"
@@ -37,8 +38,8 @@ const Footer = () => {
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://x.com/JCruz00001"
               target="_blank"
               rel="noopener noreferrer"
@@ -46,14 +47,14 @@ const Footer = () => {
               aria-label="Twitter"
             >
               <Twitter size={20} />
-            </a>
-            <a
+            </Link>
+            <Link
               href="mailto:joaovcruz50@gmail.com"
               className="text-slate-700 dark:text-slate-300 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300"
               aria-label="Email"
             >
               <Mail size={20} />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -63,7 +64,7 @@ const Footer = () => {
           </p>
 
           <nav className="flex gap-6">
-            <a
+            <Link
               href="#about"
               onClick={(e) => {
                 e.preventDefault()
@@ -79,8 +80,8 @@ const Footer = () => {
               className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300 cursor-pointer"
             >
               Sobre Mim
-            </a>
-            <a
+            </Link>
+            <Link
               href="#portfolio"
               onClick={(e) => {
                 e.preventDefault()
@@ -96,8 +97,8 @@ const Footer = () => {
               className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300 cursor-pointer"
             >
               Portfolio
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
               onClick={(e) => {
                 e.preventDefault()
@@ -113,7 +114,7 @@ const Footer = () => {
               className="text-sm text-slate-600 dark:text-slate-400 hover:text-teal-500 dark:hover:text-teal-400 transition-colors duration-300 cursor-pointer"
             >
               Contato
-            </a>
+            </Link>
           </nav>
         </div>
       </div>
