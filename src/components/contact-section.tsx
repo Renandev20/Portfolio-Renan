@@ -134,7 +134,7 @@ const ContactSection = () => {
                   <MessageCircle className="text-teal-500 dark:text-teal-400" size={24} />
                 </div>
                 <div>
-                  <a href="https://wa.me/553599747872" className="text-slate-900 dark:text-white">
+                  <a href="https://wa.me/5535997478472" className="text-slate-900 dark:text-white">
                   <h4 className="text-purple-600 dark:text-purple-400 font-medium">WhatsApp</h4>
                   <p className="text-slate-900 dark:text-white">(35) 99747-8472</p>
                   </a>
