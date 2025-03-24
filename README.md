@@ -134,5 +134,5 @@ Este projeto está licenciado sob a licença **MIT** - veja o arquivo LICENSE pa
 - Email: joaovcruz50@gmail.com
 - WhatsApp: +55 (35) 99747-8472
 
-Feito com ❤️ por **João Cruz**
+Feito por **João Cruz**
 
