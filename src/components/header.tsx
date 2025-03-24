@@ -3,8 +3,8 @@
 import type React from "react"
 
 import { useState, useEffect } from "react"
-import { Menu, X, Moon, Sun, Code } from "lucide-react"
-import { useTheme } from "./theme-provider"
+import { Menu, X, Code } from "lucide-react"
+
 
 type TypeItemsHeader = {
   name: string
@@ -39,7 +39,7 @@ const Header = () => {
     if (element) {
       const offsetTop = element.getBoundingClientRect().top + window.pageYOffset
       window.scrollTo({
-        top: offsetTop - 80, // Ajuste este valor conforme necessário para compensar o header fixo
+        top: offsetTop - 80, 
         behavior: "smooth",
       })
     }
