@@ -37,9 +37,9 @@ const skills: Skill[] = [
     icon: <Code className="text-teal-500" size={24} />,
   },
   {
-    name: "Node.js",
+    name: "React",
     level: 75,
-    category: "Backend",
+    category: "Frontend",
     icon: <Server className="text-teal-500" size={24} />,
   },
   {
@@ -55,7 +55,7 @@ const skills: Skill[] = [
     icon: <Database className="text-teal-500" size={24} />,
   },
   {
-    name: "React Native",
+    name: "Flutter ",
     level: 65,
     category: "Mobile",
     icon: <Smartphone className="text-teal-500" size={24} />,

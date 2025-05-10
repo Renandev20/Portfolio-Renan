@@ -14,69 +14,139 @@ type Project = {
   tags: string[]
   github: string
   demo: string
-  category: string // Adicionando a categoria ao tipo Project
+  category: string
 }
 
 const projects: Project[] = [
   {
     id: 1,
     title: "Controle de E-commerce Integrado com Mercado Livre",
-    description: "Sistema de controle de e-commerce que utiliza a API do Mercado Livre para gerenciar e publicar produtos de forma automatizada.",
+    description: "Sistema de controle de e-commerce que utiliza a API do Mercado Livre para gerenciar e publicar produtos.",
     image: "/ecommerce.png",
     tags: ["Python", "API", "Automação"],
-    github: "https://github.com/joaocruz1/sistem_mercadolivre",
-    demo: "https://github.com/joaocruz1/system_mercadolivre",
-    category: "Python",
+    github: "https://github.com/Renandev20/Ecomerce",
+    demo: "https://github.com/Renandev20/Ecomerce",
+    category: "Web",
   },
   {
     id: 2,
-    title: "Portfólio de João Cruz",
-    description: "Meu portfólio pessoal desenvolvido para mostrar minhas habilidades, projetos e experiências como desenvolvedor fullstack.",
-    image: "/portfolio.png",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/joaocruz1/portfolio_joaocruz",
-    demo: "https://github.com/joaocruz1/joaocruz1",
-    category: "Next.js",
+    title: "ATENA CALC",
+    description: "Site educacional Atena Calc, projeto final da disciplina de Programação Web.",
+    image: "/Captura de tela 2025-05-07 174458.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Renandev20/Atena2",
+    demo: "https://renandev20.github.io/Atena2/",
+    category: "Web",
   },
   {
     id: 3,
-    title: "Projeto Review Movies",
-    description: "Projeto desenvolvido em 2 dias para aprimorar meu desenvolvimento em React.js, permitindo avaliações de filmes.",
+    title: "Movies View",
+    description: "Aplicação React para avaliação de filmes, desenvolvida em 2 dias.",
     image: "/reviewmovies.png",
     tags: ["React.js", "JavaScript", "CSS"],
     github: "https://github.com/joaocruz1/project-review-movies",
     demo: "https://joaocruz1.github.io/project-review-movies/",
-    category: "React.js",
+    category: "Web",
   },
   {
     id: 4,
-    title: "Projeto React",
-    description: "Projeto desenvolvido para aprimorar habilidades em React.",
-    image: "/projectreact.png",
+    title: "Projeto DT Cash (Financeiro)",
+    description: "Sistema de controle financeiro pessoal.",
+    image: "/Captura de tela 2025-05-07 174724.png",
     tags: ["React.js", "JavaScript", "CSS"],
-    github: "https://github.com/joaocruz1/project-zip-code",
-    demo: "https://joaocruz1.github.io/project-zip-code/",
-    category: "React.js",
+    github: "https://github.com/Renandev20/DT-CASH",
+    demo: "https://github.com/Renandev20/DT-CASH",
+    category: "Web",
   },
   {
     id: 5,
-    title: "ChatBot WhatsApp",
-    description: "ChatBot desenvolvido para aprimorar habilidades em desenvolvimento de bots.",
-    image: "/chatbot.png",
-    tags: ["Python", "ChatBot", "Automação"],
-    github: "https://github.com/joaocruz1/chatbot_wpp",
-    demo: "https://github.com/joaocruz1/chatbot_wpp",
-    category: "Python",
+    title: "SISU",
+    description: "Simulador de SISU com IA.",
+    image: "/Captura de tela 2025-05-07 183538.png",
+    tags: ["Python", "IA", "HTML/CSS/JS"],
+    github: "https://github.com/Renandev20/Simulador-SISU?tab=readme-ov-file",
+    demo: "https://github.com/Renandev20/Simulador-SISU?tab=readme-ov-file",
+    category: "Web",
   },
   {
     id: 6,
-    title: "Trabalho em C",
-    description: "Projeto desenvolvido em linguagem C para fins acadêmicos.",
-    image: "/trabalhoc.png",
-    tags: ["C", "Programação", "Acadêmico"],
-    github: "https://github.com/joaocruz1/velha_c",
-    demo: "https://github.com/joaocruz1/velha_c",
-    category: "C",
+    title: "Corinthians",
+    description: "Site temático do Corinthians.",
+    image: "/Captura de tela 2025-05-07 175404.png",
+    tags: ["Mysql", "HTML", "CSS"],
+    github: "https://github.com/Renandev20/Corinthians",
+    demo: "https://github.com/Renandev20/Corinthians",
+    category: "Web",
+  },
+  {
+    id: 7,
+    title: "Aplicativo contatos  em Flutter",
+    description: "Aplicativo de contatos  desenvolvido com Flutter.",
+    image: "/Captura de tela 2025-05-07 182954.png",
+    tags: ["Flutter", "Dart", "API"],
+    github: "https://github.com/Renandev20/APP-Contato",
+    demo: "https://github.com/Renandev20/APP-Contato",
+    category: "Mobile",
+  },
+  {
+    id: 8,
+    title: "Gestão de Times",
+    description: "Aplicativo para gestão de equipes.",
+    image: "/Captura de tela 2025-05-07 180059.png",
+    tags: ["Banco de Dados", "Java"],
+    github: "https://github.com/Renandev20/ProjetofinalBD-SistemadeEsporte",
+    demo: "https://github.com/Renandev20/ProjetofinalBD-SistemadeEsporte",
+    category: "Desktop",
+  },
+  {
+    id: 9,
+    title: "Aplicativo de Votação",
+    description: "Sistema de votação em tempo real.",
+    image: "/Captura de tela 2025-05-07 180543.png",
+    tags: ["Java", "Docker", "MongoDB"],
+    github: "https://github.com/Renandev20/-Sistema-para-Eleicao-Usando-Quarkus-Framework",
+    demo: "https://github.com/Renandev20/-Sistema-para-Eleicao-Usando-Quarkus-Framework",
+    category: "Web",
+  },
+  {
+    id: 10,
+    title: "Atena Vest",
+    description: "Aplicativo de estudos.",
+    image: "/Imagem do WhatsApp de 2024-12-02 à(s) 10.49.31_dae8e44a.jpg",
+    tags: ["Flutter", "Dart"],
+    github: "",
+    demo: "",
+    category: "Mobile",
+  },
+  {
+    id: 11,
+    title: "R.E.S.P",
+    description: "Sistema automatizado apresentado em feira científica.",
+    image: "/Captura de tela 2025-05-07 181125.png",
+    tags: ["Arduino", "Python", "IA"],
+    github: "https://github.com/Renandev20/R.E.S.P",
+    demo: "https://github.com/Renandev20/R.E.S.P",
+    category: "Automação",
+  },
+  {
+    id: 12,
+    title: "Spotify Clone",
+    description: "Projeto final de HTML e CSS recriando o visual do Spotify.",
+    image: "/Captura de tela 2025-05-07 181816.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/seuusuario/bot-mensagens",
+    demo: "https://github.com/seuusuario/bot-mensagens",
+    category: "Web",
+  },
+  {
+    id: 13,
+    title: "Jogo Detona Ralph",
+    description: "Jogo inspirado no filme Detona Ralph.",
+    image: "/Captura de tela 2025-05-07 181539.png",
+    tags: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Renandev20/DIO-GAME",
+    demo: "https://renandev20.github.io/DIO-GAME/",
+    category: "Web",
   },
 ]
 
@@ -84,7 +154,7 @@ const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState("Todos")
   const { scrollY } = useParallax()
 
-  const filters = ["Todos", "React.js", "Next.js", "Python", "C"]
+  const filters = ["Todos", "Web", "Backend", "Automação", "Desktop", "Mobile", "C"]
 
   const filteredProjects =
     activeFilter === "Todos"
@@ -93,7 +163,6 @@ const PortfolioSection = () => {
 
   return (
     <section id="portfolio" className="py-20 px-6 bg-slate-50 dark:bg-slate-900 relative overflow-hidden">
-      {/* Background Elements com Parallax */}
       <div
         className="absolute inset-0 opacity-30 dark:opacity-10"
         style={{
@@ -101,7 +170,6 @@ const PortfolioSection = () => {
           transform: `translateY(${scrollY * 0.02}px)`,
         }}
       />
-
       <div
         className="absolute inset-0"
         style={{
@@ -109,7 +177,6 @@ const PortfolioSection = () => {
           transform: `translateY(${scrollY * -0.02}px)`,
         }}
       />
-
       <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <span className="text-slate-900 dark:text-white">Meu </span>

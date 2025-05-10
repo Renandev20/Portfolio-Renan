@@ -10,8 +10,8 @@ const robotoSlab = Roboto_Slab({
 })
 
 export const metadata: Metadata = {
-  title: "João Cruz | Desenvolvedor Fullstack",
-  description: "Portfolio de João Cruz, desenvolvedor fullstack especializado em React, Next.js e Node.js",
+  title: "RENAN| Desenvolvedor Fullstack",
+  description: "Portfolio de RENAN , desenvolvedor fullstack especializado em JAVA ,REACT e estudando flutter",
 }
 
 export default function RootLayout({

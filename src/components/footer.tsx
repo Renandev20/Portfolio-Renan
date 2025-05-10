@@ -14,7 +14,7 @@ const Footer = () => {
                 <Code className="text-white" size={16} />
               </div>
               <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-600">
-                João Cruz
+                RENAN NUNES
               </h3>
             </div>
             <p className="text-slate-700 dark:text-slate-300 mt-2">Desenvolvedor Fullstack</p>
@@ -60,7 +60,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-600 dark:text-slate-400 text-sm">
-            &copy; {currentYear} João Cruz. Todos os direitos reservados.
+            &copy; {currentYear} RENAN NUNES. Todos os direitos reservados.
           </p>
 
           <nav className="flex gap-6">

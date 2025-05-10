@@ -16,7 +16,7 @@ const technologies: TypeTechnologies[] = [
   { name: "TypeScript", icon: "ts", color: "#007ACC" },
   { name: "Python", icon: "python", color: "#306998" },
   { name: "Node.js", icon: "node", color: "#68A063" },
-  { name: "PHP", icon: "php", color: "#777BB3" },
+  { name: "PHP", icon: "", color: "#777BB3" },
   { name: "Git", icon: "git", color: "#F1502F" },
   { name: "GitHub", icon: "github", color: "#ffffff" },
 ]
@@ -104,8 +104,8 @@ const AboutMe = () => {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-teal-500 to-purple-600 rounded-full opacity-75 group-hover:opacity-100 blur group-hover:blur-md transition duration-1000"></div>
             <div className="relative">
               <Image
-                src="/ProfilePicture.png"
-                alt="Foto João Cruz"
+                src="/1737915525783-removebg-preview.png"
+                alt="Foto Renan"
                 width={280}
                 height={280}
                 className="rounded-full z-10 relative"
@@ -123,12 +123,12 @@ const AboutMe = () => {
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
               Olá, sou{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-600">
-                João Cruz
+                RENAN NUNES
               </span>
             </h3>
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-              Sou um desenvolvedor apaixonado por tecnologia e inovação. Minha jornada na programação começou há 3 anos,
-              e desde então tenho me dedicado a criar soluções eficientes e impactantes.
+              Sou um desenvolvedor e tecnico em informática apaixonado por tecnologia e inovação. Minha jornada na programação começou há 3 anos,
+              e desde então tenho me dedicado a criar soluções eficientes e inovadores.
             </p>
             <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
               Gosto de transformar ideias em realidade através da programação, buscando sempre aprender e evoluir. Meu
@@ -157,8 +157,8 @@ const AboutMe = () => {
                         {item.icon === "react" && "⚛️"}
                         {item.icon === "ts" && "TS"}
                         {item.icon === "python" && "🐍"}
-                        {item.icon === "node" && "⬢"}
-                        {item.icon === "php" && "PHP"}
+                        {item.icon === "sql" && "💾"}
+                        {item.icon === "flutter" && "🐦"}
                         {item.icon === "git" && "⎇"}
                         {item.icon === "github" && "⦿"}
                       </span>

@@ -30,10 +30,10 @@ const ContactSection = () => {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       })
@@ -57,7 +57,6 @@ const ContactSection = () => {
     } finally {
       setIsSubmitting(false)
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -65,7 +64,6 @@ const ContactSection = () => {
         message: "",
       })
 
-      // Clear message after 5 seconds
       setTimeout(() => {
         setSubmitMessage(null)
       }, 5000)
@@ -81,7 +79,7 @@ const ContactSection = () => {
           }
         })
       },
-      { threshold: 0.1 },
+      { threshold: 0.1 }
     )
 
     const currentSection = sectionRef.current
@@ -105,7 +103,9 @@ const ContactSection = () => {
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <span className="text-slate-900 dark:text-white">Entre em </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-600">Contato</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-600">
+            Contato
+          </span>
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -122,9 +122,9 @@ const ContactSection = () => {
                   <Mail className="text-teal-500 dark:text-teal-400" size={24} />
                 </div>
                 <div>
-                  <a href="mailto:joaovcruz50@gmail.com" className="text-slate-900 dark:text-white">
-                  <h4 className="text-purple-600 dark:text-purple-400 font-medium">Email</h4>
-                  <p className="text-slate-900 dark:text-white">joaovcruz50@gmail.com</p>
+                  <a href="mailto:renanoliveiranunes398@gmail.com" className="text-slate-900 dark:text-white">
+                    <h4 className="text-purple-600 dark:text-purple-400 font-medium">Email</h4>
+                    <p className="text-slate-900 dark:text-white">renanoliveiranunes398@gmail.com</p>
                   </a>
                 </div>
               </div>
@@ -134,9 +134,9 @@ const ContactSection = () => {
                   <MessageCircle className="text-teal-500 dark:text-teal-400" size={24} />
                 </div>
                 <div>
-                  <a href="" className="text-slate-900 dark:text-white">
-                  <h4 className="text-purple-600 dark:text-purple-400 font-medium">WhatsApp</h4>
-                  <p className="text-slate-900 dark:text-white">+55 (35) 99747-8472</p>
+                  <a href="https://wa.me/558591957884" target="_blank" rel="noopener noreferrer">
+                    <h4 className="text-purple-600 dark:text-purple-400 font-medium">WhatsApp</h4>
+                    <p className="text-slate-900 dark:text-white">+55 (85) 9195-7884</p>
                   </a>
                 </div>
               </div>
@@ -147,7 +147,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="text-purple-600 dark:text-purple-400 font-medium">Localização</h4>
-                  <p className="text-slate-900 dark:text-white">Minas Gerais, Brasil</p>
+                  <p className="text-slate-900 dark:text-white">Ceará, Brasil</p>
                 </div>
               </div>
             </div>
@@ -155,7 +155,7 @@ const ContactSection = () => {
 
           <div className="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg border border-slate-200 dark:border-slate-700">
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-            {submitMessage && (
+              {submitMessage && (
                 <div
                   className={`p-4 rounded-lg ${
                     submitMessage.type === "success"
@@ -247,7 +247,6 @@ const ContactSection = () => {
                   </>
                 )}
               </button>
-
             </form>
           </div>
         </div>

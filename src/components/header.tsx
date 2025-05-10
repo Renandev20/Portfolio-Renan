@@ -54,7 +54,7 @@ const Header = () => {
           <Code className="text-white" size={20} />
         </div>
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-purple-600 font-bold text-xl hidden sm:block">
-          João Cruz
+        RENAN NUNES
         </span>
       </div>
 
