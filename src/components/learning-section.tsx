@@ -15,7 +15,7 @@ import {
   Coffee,
   Smartphone,
   Brain,
-  Code2,
+  
   Laptop,
 } from "lucide-react"
 import type { JSX } from "react/jsx-runtime"
